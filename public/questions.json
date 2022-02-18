@@ -1,0 +1,15 @@
+{
+    "JavaScript":[
+
+        {   "id": 1,
+            "question": "Inside which HTML element do we put the JavaScript?",
+            "answer":  "script"
+        },
+        {   "id": 2,
+            "question": "What is the correct JavaScript syntax to change the content of the HTML element below",
+            "answer":  "document.getElementById('demo').innerHTML"
+        }
+
+    ]
+
+}

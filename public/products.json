@@ -1,0 +1,81 @@
+{
+    "items":[
+        {
+            "sys": {"id":"7"},
+            "fields":  {
+                "title": "ceramic pot",
+                "price": 15,
+                "size": 15,
+                "image": {
+                    "url1": "./assets/images/ceramic_pot.jpg",
+                    "url2": "./assets/images/ceramic_pot2.jpg"
+                }
+            }
+        },
+    {
+            "sys": {"id":"8"},
+            "fields":  {
+                "title": "fractured pot",
+                "price": 20,
+                "size": 12,
+                "image":  {
+                    "url1": "./assets/images/fractured_pot.jpg",
+                    "url2": "./assets/images/fractured_pot2.jpg"
+                }
+
+            }
+        },
+        {
+            "sys": {"id":"9"},
+            "fields":  {
+                "title": "clay pot",
+                "price": 25,
+                 "size": 15,
+                "image": {
+                    "url1": "./assets/images/clay_pot.jpg",
+                    "url2": "./assets/images/clay_pot2.jpg"
+                }
+
+            }
+        },
+        {
+            "sys": {"id":"10"},
+            "fields":  {
+                "title": "concrete ridge pot",
+                "price": 55,
+                 "size": 22,
+                "image": {
+                    "url1": "./assets/images/Concrete_ridge_pot.jpg",
+                    "url2": "./assets/images/Concrete_ridge_pot2.jpg"
+                }
+
+            }
+        },
+        {
+            "sys": {"id":"11"},
+            "fields":  {
+                "title": "fibrestone cube pot",
+                "price": 45,
+                 "size": 22,
+                "image": {
+                    "url1": "./assets/images/Fibrestone_cube_pot.jpg",
+                    "url2": "./assets/images/Fibrestone_cube_pot2.jpg"
+                }
+
+            }
+        },
+        {
+            "sys": {"id":"12"},
+            "fields":  {
+                "title": "fibrestone bucket pot",
+                "price": 50,
+                 "size": 24,
+                "image": {
+                    "url1": "./assets/images/Fibrestone_bucket_pot.jpg",
+                    "url2": "./assets/images/Fibrestone_bucket_pot2.jpg"
+                }
+
+            }
+        }
+    ]
+}
