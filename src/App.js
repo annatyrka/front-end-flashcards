@@ -1,14 +1,45 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
+import { Box, Container } from '@mui/material';
 import FlashCard from './components/FlashCard';
 import Question from './components/Question';
-import NewQuestionButton from './components/NewQuestionButton';
-import PrevQuestionButton from './components/PrevQuestionButton';
+import CurrentQuestionButton from './components/CurrentQuestionButton';
+import NextPreviousButton from './components/NextPreviousButton';
 import Header from './components/Header';
 import QuizTypes from './components/QuizTypes';
 import SingleCard from './components/SingleCard';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
+
 
 const quizTypes = ["HTML", "CSS", "JavaScript"];
+
+
+
+const LayoutContainer = styled('div')(() => ({
+  height: '100vh',
+  overflow: 'hidden',
+  width: '100%',
+  backgroundColor: '#282A35',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center', 
+
+}));
+
+
+const buttonStyles = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 150px)',
+  justifyItems: 'stretch',
+  columnGap: 5,
+  p: 5,
+}
+
+const theme = createTheme({
+
+})
 
 function App() {
 
@@ -45,21 +76,21 @@ function App() {
   },[quizType]);
 
   
+  const toggleFrontBack = () => {
+
+    phase === "front" ? setPhase("back") : setPhase("front");
+  }
 
   const handleNewQuestion = () => {
 
     if (phase === "back") {
-      setPrevQuestion(question);
-      setPrevAnswer(answer);
-      fetchRandomQuestion();
-      setPhase('front');
+      setPhase("front")
     }
+    setPrevQuestion(question);
+    setPrevAnswer(answer);
+    fetchRandomQuestion();
 
-    if (phase === "front") {
-      setPhase("back");
-    }
   };
-
 
   // check behaviour with multiple questions
   const handlePrevQuestion = () => {
@@ -75,8 +106,10 @@ function App() {
     setQuizType(null);
   }
 
+
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
+    <LayoutContainer>
       {!quizType && (
         <QuizTypes>
           {quizTypes.map((item) => {
@@ -91,27 +124,35 @@ function App() {
       )}
 
       {quizType &&
-        (<>
+        (< >
         <Header 
           quizType={quizType}
           onClick={returnToMainPage}
         />
-        <FlashCard>
+        <FlashCard >
           <Question 
             question={question}
             answer={answer}
             phase={phase}
           />
-         < PrevQuestionButton 
+        <Box sx={buttonStyles}>
+         < NextPreviousButton 
          onClick={handlePrevQuestion}
+         button="back"
          />
-          <NewQuestionButton
-            onClick={handleNewQuestion}
+          <CurrentQuestionButton
+            onClick={toggleFrontBack}
             phase={phase}
           />
+        < NextPreviousButton 
+         onClick={handleNewQuestion}
+         button="next"
+         />
+        </Box>
         </FlashCard>
         </>)}
-    </div>
+    </LayoutContainer>
+    </ThemeProvider>
   );
 }
 

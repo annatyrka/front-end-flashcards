@@ -1,15 +1,23 @@
-import React, {useState} from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import {Container} from '@mui/material';
+import React from 'react';
+import { Box } from '@mui/material'
+import { styled } from '@mui/material/styles';
 
 
+const styledBox ={
+    height: '100%',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+}
 
 const QuizTypes = ({children}) => {
 
     return (
-    <Container>
+    <Box sx={styledBox} >
         {children}
-    </Container>
+    </Box>
     )
 }
 
