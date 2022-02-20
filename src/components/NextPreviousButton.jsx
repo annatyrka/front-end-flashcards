@@ -2,10 +2,19 @@ import React from 'react';
 import CustomizedButton from './CustomizedButton';
 
 
-const NextPreviousButton = ({onClick, button}) => {
+// test disabled
+const NextPreviousButton = ({onClick, button,prevQuestion, endIcon, startIcon}) => {
 
     return (
-        <CustomizedButton onClick={onClick}> {button} </CustomizedButton>
+        <CustomizedButton
+            onClick={onClick}
+            endIcon={endIcon}
+            startIcon={startIcon}
+     
+        
+            >
+                {button}
+        </CustomizedButton>
     )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Paper,Button, Typography} from '@mui/material';
+import {Paper,Box, Typography} from '@mui/material';
 import CustomizedButton from './CustomizedButton';
 
 const headerStyle = {
@@ -12,7 +12,8 @@ const headerStyle = {
     alignItems: 'center',
     height: '50px',
     p: 2,
-
+    backgroundColor: 'primary.dark',
+    color: '#fff'
 }
 
 
@@ -22,7 +23,10 @@ const Header = ({quizType, onClick}) => {
     return (
 <Paper sx={headerStyle}>
     <CustomizedButton onClick={onClick}>go back</CustomizedButton>
-    <Typography variant="h5">Learning {quizType}</Typography>
+    <Box>
+        <Typography variant="h5" sx={{display: 'inline'}}>Learning</Typography>
+        <Typography variant="h5" sx={{color: 'secondary.main', fontWeight: 600, display:"inline", ml:1}}>{quizType}</Typography>
+    </Box>
 </Paper>
 
     )

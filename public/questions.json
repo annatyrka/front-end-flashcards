@@ -2,14 +2,72 @@
     "JavaScript":[
 
         {   "id": 1,
-            "question": "Inside which HTML element do we put the JavaScript?",
-            "answer":  "script"
+            "question": {
+                "text": "Inside which HTML element do we put the JavaScript?",
+                "code": null
+            },
+            "answer":  {
+                "text": null,
+                "code": "<script>",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"
+            }
+            
         },
         {   "id": 2,
-            "question": "What is the correct JavaScript syntax to change the content of the HTML element below",
-            "answer":  "document.getElementById('demo').innerHTML"
+            "question": {
+                "text": "What is the correct JavaScript syntax to change the content of the HTML element below?",
+                "code": "<p id=\"demo\">This is a demonstration.</p>"
+            },
+            "answer":  {
+                "text": null,
+                "code": "document.getElementById('demo').innerHTML",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
+            }
+        },        
+        {   "id": 3,
+            "question": {
+                "text": "What is Hoisting in JavaScript?",
+                "code": null
+            },
+            "answer":  {
+                "text": "JavaScript Hoisting is a process whereby the declarations of variables, function and classes are moved to the top of their scope prior to code execution. Hoisting allows functions to be safely used in code before they are declared.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Glossary/Hoisting"
+            }
+        },
+        {   "id": 4,
+            "question": {
+                "text": "What is Hoisting in JavaScript?",
+                "code": null
+            },
+            "answer":  {
+                "text": "JavaScript Hoisting is a process whereby the declarations of variables, function and classes are moved to the top of their scope prior to code execution. \nHoisting allows functions to be safely used in code before they are declared.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Glossary/Hoisting"
+            }
+        },
+        {   "id": 4,
+            "question": {
+                "text": "Show an example of variable hoisting with the var keyword",
+                "code": null
+            },
+            "answer":  {
+                "text": "JavaScript only hoists declarations, not initializations!",
+                "code": "console.log(num); // Returns 'undefined' \nvar num = 6; // Initialization and declaration. \nconsole.log(num); // Returns 6",
+                "source": "https://developer.mozilla.org/en-US/docs/Glossary/Hoisting#var_hoisting"
+            }
+        },
+        {   "id": 4,
+            "question": {
+                "text": "Show an example of variable hoisting with the let and const keywords",
+                "code": null
+            },
+            "answer":  {
+                "text": "Variables declared with let and const, unlike var, are not initialized with a default value.",
+                "code": "console.log(num); // Throws ReferenceError \nlet num = 6; // Initialization",
+                "source": "https://developer.mozilla.org/en-US/docs/Glossary/Hoisting#let_and_const_hoisting"
+            }
         }
-
     ]
 
 }
