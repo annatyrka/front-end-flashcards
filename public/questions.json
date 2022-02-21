@@ -3,20 +3,20 @@
 
         {   "id": 1,
             "question": {
-                "text": "Inside which HTML element do we put the JavaScript?",
+                "text": "Inside which `HTML` element do we put the JavaScript?",
                 "code": null
             },
             "answer":  {
                 "text": null,
-                "code": "<script>",
+                "code": "`<script>`",
                 "source": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"
             }
             
         },
         {   "id": 2,
             "question": {
-                "text": "What is the correct JavaScript syntax to change the content of the HTML element below?",
-                "code": "<p id=\"demo\">This is a demonstration.</p>"
+                "text": "What is the correct JavaScript syntax to change the content of the `HTML` element below?",
+                "code": "`<p id=\"demo\">This is a demonstration.</p>`"
             },
             "answer":  {
                 "text": null,
@@ -48,26 +48,37 @@
         },
         {   "id": 4,
             "question": {
-                "text": "Show an example of variable hoisting with the var keyword",
+                "text": "Show an example of variable hoisting with the `var` keyword",
                 "code": null
             },
             "answer":  {
                 "text": "JavaScript only hoists declarations, not initializations!",
-                "code": "console.log(num); // Returns 'undefined' \nvar num = 6; // Initialization and declaration. \nconsole.log(num); // Returns 6",
+                "code": "```console.log(num); // Returns 'undefined'```\n```var num = 6; // Initialization and declaration.```\n```console.log(num); // Returns 6```",
                 "source": "https://developer.mozilla.org/en-US/docs/Glossary/Hoisting#var_hoisting"
             }
         },
         {   "id": 4,
             "question": {
-                "text": "Show an example of variable hoisting with the let and const keywords",
+                "text": "Show an example of variable hoisting with the `let` and `const` keywords",
                 "code": null
             },
             "answer":  {
-                "text": "Variables declared with let and const, unlike var, are not initialized with a default value.",
-                "code": "console.log(num); // Throws ReferenceError \nlet num = 6; // Initialization",
+                "text": "Variables declared with `let` and `const`, unlike `var`, are not initialized with a default value.",
+                "code": "```console.log(num); // Throws ReferenceError```<br> ```let num = 6; // Initialization```",
                 "source": "https://developer.mozilla.org/en-US/docs/Glossary/Hoisting#let_and_const_hoisting"
             }
-        }
+        },
+        {   "id": 5,
+            "question": {
+                "text": "What is a closure?",
+                "code": null
+            },
+            "answer":  {
+                "text": "A closure gives you access to an outer function's scope from an inner function.",
+                "code": null ,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"
+            }
+        }       
     ]
 
 }

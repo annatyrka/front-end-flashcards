@@ -11,6 +11,7 @@ const headerStyle = {
     justifyContent: 'space-around',
     alignItems: 'center',
     height: '50px',
+    borderRadius: "none",
     p: 2,
     backgroundColor: 'primary.dark',
     color: '#fff'

@@ -20,14 +20,16 @@ const LayoutContainer = styled('div')(() => ({
   height: '100vh',
   overflow: 'hidden',
   width: '100%',
-  backgroundColor: '#f0f0f0',
+  // backgroundColor: '#f0f0f0',
+  // backgroundColor: '#414f5e',
+  background: 'linear-gradient(120deg,#414f5e, #35414f,#414f5e)',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center', 
-
+// , #414f5e
 }));
-
+// #f0f0f0
 const buttonStyles = {
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 150px)',
@@ -48,6 +50,7 @@ const htmlTheme = createTheme({
     }
   }
 });
+
 
 const cssTheme = createTheme({
   palette: {
@@ -134,9 +137,8 @@ function App() {
     setPrevQuestionCode(questionCode);
     setPrevAnswerCode(answerCode);
     setPrevSource(source);
-
-    setQuestion(null);
-    setQuestionCode(null);
+    // setQuestion(null);
+    // setQuestionCode(null);
  
 
     setTimeout(() => {

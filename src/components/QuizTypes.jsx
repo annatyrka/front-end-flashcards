@@ -25,7 +25,7 @@ const QuizTypes = ({children}) => {
 
     return (
     <Box sx={styledBox} >
-        <Typography variant="h2" component="h1" sx={{fontWeight: 500}}>Front End Flashcards</Typography>
+        <Typography variant="h2" component="h1" sx={{fontWeight: 500, color:"primary.contrastText"}}>Front End Flashcards</Typography>
         <Box sx={quizCards}>
             {children}
         </Box>
