@@ -21,15 +21,13 @@ const LayoutContainer = styled('div')(() => ({
   overflow: 'hidden',
   width: '100%',
   // backgroundColor: '#f0f0f0',
-  // backgroundColor: '#414f5e',
   background: 'linear-gradient(120deg,#414f5e, #35414f,#414f5e)',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
-  alignItems: 'center', 
-// , #414f5e
+  alignItems: 'center',   
 }));
-// #f0f0f0
+
 const buttonStyles = {
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 150px)',
@@ -83,12 +81,13 @@ function App() {
   const [answer, setAnswer] = useState(null);
   const [answerCode, setAnswerCode] = useState(null);
   const [source, setSource] = useState(null);
-  const [phase, setPhase] = useState('front'); 
-  const [prevQuestion, setPrevQuestion] = useState(null);
-  const [prevAnswer, setPrevAnswer] = useState(null);
-  const [prevQuestionCode, setPrevQuestionCode] = useState(null);
-  const [prevAnswerCode, setPrevAnswerCode] = useState(null);
-  const [prevSource, setPrevSource] = useState(null);
+  const [phase, setPhase] = useState('front');
+  // previous cards 
+  const [prevQuestion, setPrevQuestion] = useState([]);
+  const [prevAnswer, setPrevAnswer] = useState([]);
+  const [prevQuestionCode, setPrevQuestionCode] = useState([]);
+  const [prevAnswerCode, setPrevAnswerCode] = useState([]);
+  const [prevSource, setPrevSource] = useState([]);
 
 
   const fetchRandomQuestion = () => {
@@ -113,15 +112,17 @@ function App() {
 
     if (quizType) {
       fetchRandomQuestion();
-
-      window.addEventListener('keydown', handleKeyDown);
-      // clean up
-      return () => {
-          window.removeEventListener('keydown', handleKeyDown);
-      };
     }
+    window.addEventListener('keydown', handleKeyDown);
+  
+  
+    // clean up
+    return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+    };
 
   },[quizType]);
+
 
   // toggle question / answer
   const toggleFrontBack = () => {
@@ -130,16 +131,15 @@ function App() {
 
   // fetch next question
   const handleNewQuestion = () => {
-
    
-    setPrevQuestion(question);
-    setPrevAnswer(answer);
-    setPrevQuestionCode(questionCode);
-    setPrevAnswerCode(answerCode);
-    setPrevSource(source);
-    // setQuestion(null);
-    // setQuestionCode(null);
- 
+    setPrevQuestion([...prevQuestion, question]);
+    setPrevAnswer([... prevAnswer,answer]);
+    setPrevQuestionCode([... prevQuestionCode,questionCode]);
+    setPrevAnswerCode([...prevAnswerCode, answerCode]);
+    setPrevSource([...prevSource, source]);
+    setQuestion(null);
+    setQuestionCode(null);
+    console.log('prevQuestion: ',prevQuestion)
 
     setTimeout(() => {
       fetchRandomQuestion();
@@ -147,19 +147,21 @@ function App() {
         setPhase("front")
       }
     },100);
-    
   };
 
   // check behaviour with multiple questions
   const handlePrevQuestion = () => {
-
-    if (!prevQuestion && !prevAnswer) return
+    console.log(prevQuestion.length)
+    if (prevQuestion.length === 0 && prevAnswer.length === 0) return
     else {
-      setQuestion(prevQuestion);
-      setAnswer(prevAnswer);
-      setQuestionCode(prevQuestionCode);
-      setAnswerCode(prevAnswerCode);
-      setSource(prevSource);
+      if (phase === "back") {
+        setPhase("front");
+      }
+      setQuestion(prevQuestion.pop());
+      setAnswer(prevAnswer.pop());
+      setQuestionCode(prevQuestionCode.pop());
+      setAnswerCode(prevAnswerCode.pop());
+      setSource(prevSource.pop());
     }
   }
   // reset
@@ -172,12 +174,13 @@ function App() {
       setQuestionCode(null);
       setAnswerCode(null);
       setSource(null);
-      setPrevQuestion(null);
-      setPrevAnswer(null);
-      setPrevQuestionCode(null);
-      setPrevAnswerCode(null);
-      setPrevSource(null);
+      setPrevQuestion([]);
+      setPrevAnswer([]);
+      setPrevQuestionCode([]);
+      setPrevAnswerCode([]);
+      setPrevSource([]);
   }
+
   const returnToMainPage = () => {
       reset();
   }
@@ -186,15 +189,16 @@ function App() {
   const handleKeyDown = (e) => {
     if (e.key === "ArrowLeft") {
       handlePrevQuestion();
+      console.log("left")
     }
-    if (e.key === "ArrowRight") {
+    else if (e.key === "ArrowRight") {
       handleNewQuestion();
+      console.log("right")
     }
-    if (e.key === "ArrowUp" || e.key === "ArrowDown" ) {
-      phase === "front" ? setPhase("back") : setPhase("front");
-    }
+    // if (e.key === "ArrowUp" || e.key === "ArrowDown" ) {
+    //   phase === "front" ? setPhase("back") : setPhase("front");
+    // }
   };
-
   const outerTheme = quizType === 'JavaScript' ?  jsTheme : quizType === "HTML" ? htmlTheme : cssTheme;
 
   return (

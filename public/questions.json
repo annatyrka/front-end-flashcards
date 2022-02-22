@@ -78,7 +78,62 @@
                 "code": null ,
                 "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"
             }
-        }       
+        },
+        {   "id": 6,
+            "question": {
+                "text": "What is `typeof` operator?",
+                "code": null
+            },
+            "answer":  {
+                "text": "In JavaScript, the `typeof` operator returns a string indicating the type of its unevaluated operand.",
+                "code": "```console.log(typeof 42) // output: \"number\"```",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+            }
+        },
+        {   "id": 7,
+            "question": {
+                "text": "What is a primitive value in JavaScript?",
+                "code": null
+            },
+            "answer":  {
+                "text": "In JavaScript, a primitive value is data that is not an object and has no methods. There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol and null. \nAll primitives are immutable.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Glossary/Primitive"
+            }
+        },
+        {   "id": 8,
+            "question": {
+                "text": "What is `NaN` in JavaScript?",
+                "code": null
+            },
+            "answer":  {
+                "text": "In JavaScript, `NaN` stand for Not a Number. It is a global property representing a value which is not a valid number.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"
+            }
+        },
+        {   "id": 9,
+            "question": {
+                "text": "What is `isNaN()` in JavaScript?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `isNaN()` function determines whether a value is `NaN` (not a valid number).",
+                "code": "```isNaN(NaN);   // true```\n```isNaN(37);   // false```\n```isNaN('37');   // false```",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN"
+            }
+        },
+        {   "id": 10,
+            "question": {
+                "text": "What are the JavaScript data types?",
+                "code": null
+            },
+            "answer":  {
+                "text": "Data types in JS consisits of **primitive values** and **objects**.\n+ Primitive values:\n  Boolean, Null, Undefined, Number, BigInt, String, Symbol\n + Objects",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
+            }
+        }                   
     ]
 
 }

@@ -11,7 +11,7 @@ const boxStyles = {
     alignItems: 'center',
     flexGrow: '1',
     width: '85%',
-    pt: 3,
+    pt: 2,
     pb: 0,
 }
 
@@ -83,9 +83,13 @@ const Question = ({phase, question, answer, questionCode, answerCode, source }) 
             )}
 
             {(phase === "back" && source) && (
-               <Button variant="outlined" size="large" sx={{color: '#fff' ,alignSelf:'flex-end'}} href={source} target="_blank" rel="noopener" endIcon={<LinkIcon />}>
-        source
-      </Button>
+               <Button variant="text"
+               sx={{color: '#fff' ,alignSelf:'flex-end', "&:hover": {color: 'secondary.main'},}}
+               href={source} target="_blank"
+               rel="noopener"
+               endIcon={<LinkIcon />}>
+                    source
+                </Button>
             )}
             
         </Box>
