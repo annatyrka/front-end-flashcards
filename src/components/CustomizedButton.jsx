@@ -1,4 +1,4 @@
-import {Button, listItemSecondaryActionClasses} from '@mui/material';
+import {Button} from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const CustomizedButton = styled(Button)(({ theme }) => ({
@@ -9,6 +9,9 @@ const CustomizedButton = styled(Button)(({ theme }) => ({
   '&:hover': {
     backgroundColor: theme.palette.secondary.light,
   },
+  [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+    fontSize: '0.75rem',
+  }
 }) ); 
 
 

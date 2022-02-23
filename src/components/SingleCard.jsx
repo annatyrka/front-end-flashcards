@@ -4,9 +4,8 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 
-const cardStyles = {
+const cardStyles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems:'center',
@@ -16,11 +15,46 @@ const cardStyles = {
     pb: 3,
     pt: 3,
     m: 3,
+    [theme.breakpoints.down('lg')]: {
+        width: '275px',
+        height: '125px',
+        m:2,
+    },
+    [theme.breakpoints.down('md')]: {
+        width: '185px',
+        height: '75px',
+        m:1,
+    },
+    "@media screen and (min-width: 768px) and (orientation: portrait)": {
+        width: '275px',
+        height: '125px',
+        m:2,
+    },
     backgroundColor: 'primary.dark',
-}
+})
 
-const styledButton ={
+const styledText = theme => ({
+    fontWeight: "500",
+    color: '#fff',
+    [theme.breakpoints.down('lg')]: {
+        fontSize: '2rem',
+    },
+    [theme.breakpoints.down('md')]: {
+        fontSize: '1.75rem',
+    },
+});
 
+const cardContent = theme => ({
+    flexGrow: "1",
+    [theme.breakpoints.down('md')]: {
+       p:0.5,
+    },
+    "@media screen and (min-width: 768px) and (orientation: portrait)": {
+        p:2,
+    },
+});
+
+const styledButton = theme => ({
     width: '150px',
     borderRadius: '20px',
     fontWeight: '600',
@@ -30,15 +64,25 @@ const styledButton ={
     '&:hover': {
         backgroundColor: 'secondary.light'
     },
-}
+    [theme.breakpoints.down('md')]: {
+        fontSize: '0.8125rem',
+        p:0.75,
+     },
+     "@media screen and (min-width: 768px) and (orientation: portrait)": {
+        fontSize: '1rem',
+        p:1,
+    },
+});
+
+
 
 const SingleCard = ({quizType, onClick}) => {
 
  
     return (
         <Card variant="contained" elevation={20} sx={cardStyles}>
-           <CardContent sx={{flexGrow:"1"}}>
-            <Typography variant="h3" sx={{fontWeight: "500", color: '#fff'}}>
+           <CardContent sx={cardContent}>
+            <Typography variant="h3" sx={styledText}>
                     {quizType}
             </Typography>
             </CardContent>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material'
 
 
-const styledBox ={
+const styledBox = {
     height: '100%',
     width: '100%',
     textAlign: 'center',
@@ -10,22 +10,49 @@ const styledBox ={
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+
 }
 
-const quizCards = {
+const mainHeader = theme => ({
+    fontWeight: 500,
+    color:"primary.contrastText",
+    // flexShrink: 2,
+    [theme.breakpoints.down('md')]: {
+        fontSize: '2.5rem'
+    },
+    "@media screen and (min-width: 768px) and (orientation: portrait)": {
+        fontSize: '3.25rem',
+        p:2,
+    },
+})
+const quizCards = theme => ({
     display: 'flex',
     flexDirection: 'row',
+    height: '50%',
+    "@media screen and (orientation: portrait)": {
+        flexDirection: 'column',
+        mt: 10,
+    },
+    "@media screen and (orientation: landscape)": {
+        flexDirection: 'row',
+
+    },  
+   [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
+        flexDirection: 'column',
+        height: 'auto',
+        mt:3,
+    },
     justifyContent: 'center',
     alignItems: 'center',
-    height: '50%',
-}
+   
+})
 
 const QuizTypes = ({children}) => {
 
     return (
     <Box sx={styledBox} >
-        <Typography variant="h2" component="h1" sx={{fontWeight: 500, color:"primary.contrastText"}}>Front End Flashcards</Typography>
+        <Typography variant="h2" component="h1" sx={mainHeader}>Front End Flashcards</Typography>
         <Box sx={quizCards}>
             {children}
         </Box>

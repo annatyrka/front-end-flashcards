@@ -25,17 +25,28 @@ const LayoutContainer = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
-  alignItems: 'center',   
+  alignItems: 'center',
 }));
 
-const buttonStyles = {
+const buttonStyles = theme => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 150px)',
   justifyItems: 'stretch',
   columnGap: 3,
   p: 4,
   pt:2,
-}
+  [`${theme.breakpoints.down('sm')} and (orientation: portrait)`]: {
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    columnGap: 2,
+  },
+  [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+p: 2
+  },
+  '@media screen and (max-width: 320px)': {
+    gridTemplateColumns: 'auto 150px auto',
+    columnGap: 1,
+  }
+});
 
 //  themes
 const htmlTheme = createTheme({
@@ -149,7 +160,6 @@ function App() {
     },100);
   };
 
-  // check behaviour with multiple questions
   const handlePrevQuestion = () => {
     console.log(prevQuestion.length)
     if (prevQuestion.length === 0 && prevAnswer.length === 0) return
@@ -157,11 +167,18 @@ function App() {
       if (phase === "back") {
         setPhase("front");
       }
-      setQuestion(prevQuestion.pop());
-      setAnswer(prevAnswer.pop());
-      setQuestionCode(prevQuestionCode.pop());
-      setAnswerCode(prevAnswerCode.pop());
-      setSource(prevSource.pop());
+      setQuestion(prevQuestion[prevQuestion.length-1])
+      setPrevQuestion(prevQuestion.slice(0,-1))
+      setAnswer(prevAnswer[prevAnswer.length-1]);
+      setPrevAnswer(prevAnswer.slice(0,-1));
+      setQuestionCode(prevQuestionCode[prevQuestionCode.length-1]);
+      setPrevQuestionCode(prevQuestionCode.slice(0,-1));
+      setQuestionCode(prevQuestionCode[prevQuestionCode.length-1]);
+      setPrevQuestionCode(prevQuestionCode.slice(0,-1));
+      setAnswerCode(prevAnswerCode[prevAnswerCode.length-1]);
+      setPrevAnswerCode(prevAnswerCode.slice(0,-1));
+      setSource(prevSource[prevSource.length-1]);
+      console.log('prevQuestion: ',prevQuestion)
     }
   }
   // reset
@@ -240,7 +257,6 @@ function App() {
          onClick={handlePrevQuestion}
          button="back"
          startIcon={<KeyboardDoubleArrowLeftIcon />}
-          prevQuestion={prevQuestion}
          />
           <CurrentQuestionButton
             onClick={toggleFrontBack}
