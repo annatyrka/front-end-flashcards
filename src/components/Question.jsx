@@ -70,6 +70,7 @@ const Question = ({phase, question, answer, questionCode, answerCode, source }) 
             {code && (
  
                 <Box dangerouslySetInnerHTML={getMarkdownText(code)}
+                className="code-box"
                 sx={{ backgroundColor: "#4f5b62",
                 textAlign: "left",
                 padding: '0 15px',

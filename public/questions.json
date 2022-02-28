@@ -134,6 +134,187 @@
                 "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
             }
         }                   
+    ],
+
+    "HTML": [
+        {   "id": 1,
+            "question": {
+                "text": "What is DOCTYPE?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The DOCYTPE declaration indicates to a browser what type of HTML the website is written in to prevent a browser from switching into so-called 'quirks mode' when rendering a document. The declaration for the HTML5 standards is `<!DOCTYPE html>`",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Glossary/Doctype"
+            }
+        },
+        {   "id": 2,
+            "question": {
+                "text": "What is `data-` attribute?",
+                "code": null
+            },
+            "answer":  {
+                "text": "It is used to store data within actual HTML page. However, these days, using `data-` attributes is generally not encouraged.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*"
+            }
+        },
+        {   "id": 3,
+            "question": {
+                "text": "What does semantic mean in HTML?",
+                "code": null
+            },
+            "answer":  {
+                "text": "Semantics refers to the meaning of a piece of code. A semantic element clearly describes its meaning to both the browser and the developer. Example of semantic elements: `<article>`, `<header>`, `<nav>`, `<main>`, `<section>`.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+            }
+        },
+        {   "id": 4,
+            "question": {
+                "text": "What is HTTP cookie?",
+                "code": null
+            },
+            "answer":  {
+                "text": "An **HTTP cookie** (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser. The browser may store the cookie and send it back to the same server with later requests.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
+            }
+        },
+        {   "id": 5,
+            "question": {
+                "text": "What is the purpose of using cookie?",
+                "code": null
+            },
+            "answer":  {
+                "text": "Cookies are mainly used for three purposes:\n + **Session management** - logins, shopping carts, game scores, or anything else the server should remember \n - **Personalization** - user preferences, themes, and other settings \n * **Tracking** - recording and analyzing user behavior",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
+            }
+        },
+        {   "id": 6,
+            "question": {
+                "text": "What is the purpose of using cookie?",
+                "code": null
+            },
+            "answer":  {
+                "text": "Cookies are mainly used for three purposes:\n + **Session management** - logins, shopping carts, game scores, or anything else the server should remember \n - **Personalization** - user preferences, themes, and other settings \n * **Tracking** - recording and analyzing user behavior",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
+            }
+        },  
+        {   "id": 7,
+            "question": {
+                "text": "What is HTML Web Storage?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The Web Storage allows web applications to store data locally within the user's browser. The two mechanisms within Web Storage are as follows:\n + `sessionStorage` - data is stored until the browser (or tab) is closed \n - `localStorage` - stores data with no expiration date",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API"
+            }
+        },
+        {   "id": 8,
+            "question": {
+                "text": "What is HTML?",
+                "code": null
+            },
+            "answer":  {
+                "text": "HTML (**H**ypertext **M**arkup **L**anguage) is the code that is used to structure a web page and its content.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+            }
+        } 
+    ],
+    "CSS": [
+        {   "id": 1,
+            "question": {
+                "text": "What does the `float` property do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `float` property indicates whether an element should float to the left, right, or not at all. Elements next to a floating element will flow around it.",
+                "code": "`.box {`\n `float: left;`\n`}`",
+                "source": "https://www.w3schools.com/cssref/pr_class_float.asp"
+            }
+        },
+        {   "id": 2,
+            "question": {
+                "text": "What does the `clear` property do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `clear` property indicates what should happen with the element that is next to a floating element.",
+                "code": "`p {`\n `clear: left;`\n`}`",
+                "source": "https://www.w3schools.com/cssref/pr_class_clear.asp"
+            }
+        },
+        {   "id": 3,
+            "question": {
+                "text": "What does the `z-index` property do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `z-index` property specifies the stack order of an element. This poroperty only works on positioned elements (position: absolute | relative | fixed | sticky) and flex items (elements that are direct children of `display:flex` elements).",
+                "code": null,
+                "source": "https://www.w3schools.com/cssref/pr_pos_z-index.asp"
+            }
+        },
+        {   "id": 4,
+            "question": {
+                "text": "What are the different media types in `@media` rule?",
+                "code": null
+            },
+            "answer":  {
+                "text": "+ `all` - for all media type devices \n - `print` - for printers \n * `screen` - for computer screens, smart-phones etc. \n + `speech` -  for screenreaders",
+                "code": null,
+                "source": "https://www.w3schools.com/cssref/css3_pr_mediaquery.asp"
+            }
+        },
+        {   "id": 5,
+            "question": {
+                "text": "What are CSS preprocessors?",
+                "code": null
+            },
+            "answer":  {
+                "text": "A CSS preprocessor is a program that lets you generate CSS from the preprocessor's own unique syntax. Most CSS preprocessors will add some features that don't exist in pure CSS, such as mixin, nesting selector, inheritance selector, etc. These features make the CSS structure more readable and easier to maintain.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Glossary/CSS_preprocessor"
+            }
+        },
+        {   "id": 6,
+            "question": {
+                "text": "What is a pseudo-element in CSS?",
+                "code": null
+            },
+            "answer":  {
+                "text": "A CSS pseudo-element lets you style a specific part of the selected element(s). For example, it can be used to style the first line of an element or insert content before, or after, the content of an element.",
+                "code": "`p::first-line {`\n`color: blue;` \n `}`",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements"
+            }
+        },
+        {   "id": 7,
+            "question": {
+                "text": "What is a pseudo-class in CSS?",
+                "code": null
+            },
+            "answer":  {
+                "text": "A CSS pseudo-class lets you style an element based on its state. For example, `:hover` can be used to change a button's color when the user's pointer hovers over it.",
+                "code": "`button:hover {`\n` color: blue;` \n `}`",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+            }
+        },
+        {   "id": 8,
+            "question": {
+                "text": "What are user action pseudo-classes?",
+                "code": null
+            },
+            "answer":  {
+                "text": "These pseudo-classes require some interaction by the user in order for them to apply, such as holding a mouse pointer over an element, for instance `:hover`.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+            }
+        }         
     ]
 
 }

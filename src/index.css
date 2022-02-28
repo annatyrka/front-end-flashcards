@@ -9,9 +9,16 @@ body {
 
 .text-box code {
   background-color: #4f5b62;
-  padding: 1px 3px;
+  padding: 0 3px;
 }
 
+.text-box p {
+  margin: 8px 0;
+}
+
+.code-box p {
+  margin: 8px 0;
+}
 .text-box ul {
   margin: 0;
 }
