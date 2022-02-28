@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/annatyrka/front-end-flashcards/static/css/main.9b5abc4e.css",
+    "main.js": "/annatyrka/front-end-flashcards/static/js/main.66beea03.js",
+    "index.html": "/annatyrka/front-end-flashcards/index.html",
+    "main.9b5abc4e.css.map": "/annatyrka/front-end-flashcards/static/css/main.9b5abc4e.css.map",
+    "main.66beea03.js.map": "/annatyrka/front-end-flashcards/static/js/main.66beea03.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b5abc4e.css",
+    "static/js/main.66beea03.js"
+  ]
+}
