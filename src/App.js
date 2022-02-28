@@ -137,7 +137,9 @@ function App() {
 
   // toggle question / answer
   const toggleFrontBack = () => {
-    phase === "front" ? setPhase("back") : setPhase("front");
+    phase === "front" ? 
+    setTimeout(() => setPhase("back"),100)
+     : setTimeout(() => setPhase("front"),100)
   }
 
   // fetch next question
@@ -157,7 +159,7 @@ function App() {
       if (phase === "back") {
         setPhase("front")
       }
-    },100);
+    },150);
   };
 
   const handlePrevQuestion = () => {

@@ -23,13 +23,11 @@ marked.setOptions({
 const Question = ({phase, question, answer, questionCode, answerCode, source }) => {
 
     const [textFontSize, setTextFontSize] = useState('1.25rem');
-    const [codeFontSize, setCodeFontSize] = useState('1rem');
-
-  
+    const [codeFontSize, setCodeFontSize] = useState('0.9rem');
   
     useEffect(() => {
         setFontSize();
-    }, [phase])
+    }, [phase, question, answer])
 
     const setFontSize = () => {
     // question font size
@@ -44,14 +42,20 @@ const Question = ({phase, question, answer, questionCode, answerCode, source }) 
     
         answerCode ? codeLength = answerCode.length : codeLength = 0;
         
-        if (textLength + codeLength < 100) {  
-            setTextFontSize('1.25rem');
-             setCodeFontSize('1.125rem');  
+        if (codeLength === 0) {
+            textLength < 100 ? setTextFontSize('1.25rem') : setTextFontSize('1.125rem')
+        } else {
+            if (textLength + codeLength < 100) {  
+                setTextFontSize('1.25rem');
+                 setCodeFontSize('0.9rem');  
+            }
+            if (textLength + codeLength >= 100){
+                setTextFontSize('1rem');
+                setCodeFontSize('0.9rem'); 
+            }; 
+
         }
-        if (textLength + codeLength >= 100){
-            setTextFontSize('1.125rem');
-            setCodeFontSize('1rem'); 
-        }; 
+    
     }
     }
 
