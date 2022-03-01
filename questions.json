@@ -314,7 +314,18 @@
                 "code": null,
                 "source": "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
             }
-        }         
+        },
+        {   "id": 9,
+            "question": {
+                "text": "What are user action pseudo-classes?",
+                "code": null
+            },
+            "answer":  {
+                "text": "These pseudo-classes require some interaction by the user in order for them to apply, such as holding a mouse pointer over an element, for instance `:hover`.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+            }
+        }                
     ]
 
 }
