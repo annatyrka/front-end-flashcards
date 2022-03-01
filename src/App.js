@@ -20,7 +20,6 @@ const LayoutContainer = styled('div')(() => ({
   height: '100vh',
   overflow: 'hidden',
   width: '100%',
-  // backgroundColor: '#f0f0f0',
   background: 'linear-gradient(120deg,#414f5e, #35414f,#414f5e)',
   display: 'flex',
   flexDirection: 'row',
@@ -100,6 +99,7 @@ function App() {
   const [prevAnswerCode, setPrevAnswerCode] = useState([]);
   const [prevSource, setPrevSource] = useState([]);
 
+  const url = "public/questions.json"
 
   const fetchRandomQuestion = () => {
 
