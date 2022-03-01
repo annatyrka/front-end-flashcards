@@ -12,6 +12,10 @@ body {
   padding: 0 3px;
 }
 
+.text-box ul {
+  padding-left: 10px;
+}
+
 .text-box p {
   margin: 8px 0;
 }
