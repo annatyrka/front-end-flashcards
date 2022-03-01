@@ -99,11 +99,11 @@ function App() {
   const [prevAnswerCode, setPrevAnswerCode] = useState([]);
   const [prevSource, setPrevSource] = useState([]);
 
-  const url = "public/questions.json"
+  
 
   const fetchRandomQuestion = () => {
 
-    fetch('questions.json')
+    fetch("./questions.json")
       .then(res => res.json())
       .then(data => {
         
