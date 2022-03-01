@@ -1,7 +1,7 @@
 {
   "name": "front-end-quiz",
   "version": "0.1.0",
-  "homepage": "https://github.com/annatyrka/front-end-flashcards",
+  "homepage": "https://annatyrka.github.io/front-end-flashcards",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
