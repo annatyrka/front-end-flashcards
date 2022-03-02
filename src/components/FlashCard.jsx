@@ -7,7 +7,7 @@ const flashCardStyles = theme => ({
     height: '325px',
     [`${theme.breakpoints.down('sm')} and (orientation: portrait)`]: {
         width: '100%',
-        height: '375px',
+        height: '385px',
         position: 'relative',
         top: '30px'
     },

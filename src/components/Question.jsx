@@ -50,7 +50,7 @@ const Question = ({phase, question, answer, questionCode, answerCode, source }) 
                  setCodeFontSize('0.9rem');  
             }
             if (textLength + codeLength >= 100){
-                setTextFontSize('1rem');
+                setTextFontSize('1.125rem');
                 setCodeFontSize('0.9rem'); 
             }; 
 
@@ -70,7 +70,7 @@ const Question = ({phase, question, answer, questionCode, answerCode, source }) 
 
     return (
         <Box sx={boxStyles}>
-           {text &&  (<Box  dangerouslySetInnerHTML={getMarkdownText(text)} sx={{fontWeight: 400, fontSize:textFontSize, width:"95%", textAlign: textStyle, lineHeight: "1.5"}} className="text-box"></Box>)}
+           {text &&  (<Box  dangerouslySetInnerHTML={getMarkdownText(text)} sx={{fontWeight: 400, fontSize:textFontSize, width:"95%", textAlign: textStyle, lineHeight: "1.35"}} className="text-box"></Box>)}
             {code && (
  
                 <Box dangerouslySetInnerHTML={getMarkdownText(code)}

@@ -11,13 +11,11 @@ const styledBox = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-
 }
 
 const mainHeader = theme => ({
     fontWeight: 500,
     color:"primary.contrastText",
-    // flexShrink: 2,
     [theme.breakpoints.down('md')]: {
         fontSize: '2.5rem'
     },
@@ -32,17 +30,18 @@ const quizCards = theme => ({
     height: '50%',
     "@media screen and (orientation: portrait)": {
         flexDirection: 'column',
-        mt: 10,
     },
     "@media screen and (orientation: landscape)": {
         flexDirection: 'row',
-
     },  
    [`${theme.breakpoints.down('md')} and (orientation: portrait)`]: {
         flexDirection: 'column',
         height: 'auto',
-        mt:3,
+        mt: 3
     },
+    "@media screen and (max-width: 320px) and (orientation: portrait)": {
+        mt: 1,
+    },  
     justifyContent: 'center',
     alignItems: 'center',
    

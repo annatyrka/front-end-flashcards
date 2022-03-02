@@ -16,7 +16,7 @@ const headerStyle = theme => ({
     backgroundColor: 'primary.dark',
     color: '#fff',
     [`${theme.breakpoints.down('xl')} and (orientation: portrait)`]: {
-        height: '85px',
+        height: '90px',
     },
     
     "@media screen and (max-width: 414px) and (orientation: portrait)": {

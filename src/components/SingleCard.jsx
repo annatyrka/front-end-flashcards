@@ -21,15 +21,25 @@ const cardStyles = theme => ({
         m:2,
     },
     [theme.breakpoints.down('md')]: {
-        width: '185px',
-        height: '75px',
+        width: '250px',
+        height: '100px',
         m:1,
     },
+
+    [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+        width: '175px',
+        height: '75px',
+    },
+
     "@media screen and (min-width: 768px) and (orientation: portrait)": {
         width: '275px',
         height: '125px',
         m:2,
     },
+    "@media screen and (max-width: 320px) and (orientation: portrait)": {
+        width: '225px',
+        height: '85px',
+    }, 
     backgroundColor: 'primary.dark',
 })
 
@@ -39,9 +49,12 @@ const styledText = theme => ({
     [theme.breakpoints.down('lg')]: {
         fontSize: '2rem',
     },
-    [theme.breakpoints.down('md')]: {
-        fontSize: '1.75rem',
+    [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+        fontSize: '1.75rem'
     },
+    // [theme.breakpoints.down('md')]: {
+    //     fontSize: '1.75rem',
+    // },
 });
 
 const cardContent = theme => ({
@@ -68,10 +81,14 @@ const styledButton = theme => ({
         fontSize: '0.8125rem',
         p:0.75,
      },
+     [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
+        width: '125px',
+    },
      "@media screen and (min-width: 768px) and (orientation: portrait)": {
         fontSize: '1rem',
         p:1,
     },
+   
 });
 
 
