@@ -52,9 +52,6 @@ const styledText = theme => ({
     [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
         fontSize: '1.75rem'
     },
-    // [theme.breakpoints.down('md')]: {
-    //     fontSize: '1.75rem',
-    // },
 });
 
 const cardContent = theme => ({
@@ -78,14 +75,13 @@ const styledButton = theme => ({
         backgroundColor: 'secondary.light'
     },
     [theme.breakpoints.down('md')]: {
-        fontSize: '0.8125rem',
-        p:0.75,
-     },
-     [`${theme.breakpoints.down('md')} and (orientation: landscape)`]: {
-        width: '125px',
-    },
-     "@media screen and (min-width: 768px) and (orientation: portrait)": {
         fontSize: '1rem',
+        p:0.75,
+        width: '125px',
+     },
+ 
+     "@media screen and (min-width: 768px) and (orientation: portrait)": {
+        fontSize: '1.125rem',
         p:1,
     },
    
