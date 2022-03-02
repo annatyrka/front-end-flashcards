@@ -154,7 +154,7 @@
                 "code": null
             },
             "answer":  {
-                "text": "It is used to store data within actual HTML page. However, these days, using `data-` attributes is generally not encouraged.",
+                "text": "The `data-` attribute is used to store data within actual HTML page. However, these days, using `data-` attributes is generally not encouraged.",
                 "code": null,
                 "source": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*"
             }
@@ -183,27 +183,16 @@
         },
         {   "id": 5,
             "question": {
-                "text": "What is the purpose of using cookie?",
+                "text": "What is the purpose of using cookies?",
                 "code": null
             },
             "answer":  {
-                "text": "Cookies are mainly used for three purposes:\n + **Session management** - logins, shopping carts, game scores, or anything else the server should remember \n - **Personalization** - user preferences, themes, and other settings \n * **Tracking** - recording and analyzing user behavior",
+                "text": "Cookies are mainly used for:\n + **Session management** - logins, shopping carts or anything else the server should remember \n - **Personalization** - user preferences, themes, and other settings \n * **Tracking** - recording and analyzing user behavior",
                 "code": null,
                 "source": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
             }
         },
         {   "id": 6,
-            "question": {
-                "text": "What is the purpose of using cookie?",
-                "code": null
-            },
-            "answer":  {
-                "text": "Cookies are mainly used for three purposes:\n + **Session management** - logins, shopping carts, game scores, or anything else the server should remember \n - **Personalization** - user preferences, themes, and other settings \n * **Tracking** - recording and analyzing user behavior",
-                "code": null,
-                "source": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
-            }
-        },  
-        {   "id": 7,
             "question": {
                 "text": "What is HTML Web Storage?",
                 "code": null
@@ -214,7 +203,7 @@
                 "source": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API"
             }
         },
-        {   "id": 8,
+        {   "id": 7,
             "question": {
                 "text": "What is HTML?",
                 "code": null
@@ -234,7 +223,7 @@
             },
             "answer":  {
                 "text": "The `float` property indicates whether an element should float to the left, right, or not at all. Elements next to a floating element will flow around it.",
-                "code": "`.box {`\n `float: left;`\n`}`",
+                "code": "`.box {`\n&nbsp;&nbsp;&nbsp; `float: left;`\n`}`",
                 "source": "https://www.w3schools.com/cssref/pr_class_float.asp"
             }
         },
@@ -245,7 +234,7 @@
             },
             "answer":  {
                 "text": "The `clear` property indicates what should happen with the element that is next to a floating element.",
-                "code": "`p {`\n `clear: left;`\n`}`",
+                "code": "`p {`\n&nbsp;&nbsp;&nbsp; `clear: left;`\n`}`",
                 "source": "https://www.w3schools.com/cssref/pr_class_clear.asp"
             }
         },
@@ -277,7 +266,7 @@
                 "code": null
             },
             "answer":  {
-                "text": "A CSS preprocessor is a program that lets you generate CSS from the preprocessor's own unique syntax. Most CSS preprocessors will add some features that don't exist in pure CSS, such as mixin, nesting selector, inheritance selector, etc. These features make the CSS structure more readable and easier to maintain.",
+                "text": "A CSS preprocessor is a program that lets you generate CSS from the preprocessor's own unique syntax. Most CSS preprocessors will add some features that don't exist in pure CSS (e.g. mixin, nesting selector). These features make the CSS structure more readable and easier to maintain.",
                 "code": null,
                 "source": "https://developer.mozilla.org/en-US/docs/Glossary/CSS_preprocessor"
             }
@@ -288,8 +277,8 @@
                 "code": null
             },
             "answer":  {
-                "text": "A CSS pseudo-element lets you style a specific part of the selected element(s). For example, it can be used to style the first line of an element or insert content before, or after, the content of an element.",
-                "code": "`p::first-line {`\n`color: blue;` \n `}`",
+                "text": "A CSS pseudo-element lets you style a specific part of the selected element(s), (e.g: styling the first line of an element or insert content before, or after, the content of an element).",
+                "code": "`p::first-line {`\n&nbsp;&nbsp;&nbsp; `color: blue;` \n `}`",
                 "source": "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements"
             }
         },
@@ -300,7 +289,7 @@
             },
             "answer":  {
                 "text": "A CSS pseudo-class lets you style an element based on its state. For example, `:hover` can be used to change a button's color when the user's pointer hovers over it.",
-                "code": "`button:hover {`\n` color: blue;` \n `}`",
+                "code": "`button:hover {`\n&nbsp;&nbsp;&nbsp;` color: blue;` \n `}`",
                 "source": "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
             }
         },
