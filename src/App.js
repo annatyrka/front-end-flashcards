@@ -103,7 +103,7 @@ function App() {
 
   const fetchRandomQuestion = () => {
 
-    fetch("front-end-flashcards/data.json")
+    fetch("http://localhost:3000/front-end-flashcards/data.json")
       .then(res => res.json())
       .then(data => {
         
