@@ -98,7 +98,7 @@ function App() {
   const [prevQuestionCode, setPrevQuestionCode] = useState([]);
   const [prevAnswerCode, setPrevAnswerCode] = useState([]);
   const [prevSource, setPrevSource] = useState([]);
-
+  const [isDisabled, setIsDisabled] = useState(true);
   
 
   const fetchRandomQuestion = () => {
@@ -131,16 +131,8 @@ function App() {
     if (quizType) {
       fetchRandomQuestion();
     }
-    window.addEventListener('keydown', handleKeyDown);
-  
-  
-    // clean up
-    return () => {
-        window.removeEventListener('keydown', handleKeyDown);
-    };
 
   },[quizType]);
-
 
   // toggle question / answer
   const toggleFrontBack = () => {
@@ -159,7 +151,8 @@ function App() {
     setPrevSource([...prevSource, source]);
     setQuestion(null);
     setQuestionCode(null);
-    console.log('prevQuestion: ',prevQuestion)
+    if (isDisabled) setIsDisabled(false);
+    // console.log('prevQuestion: ',prevQuestion)
 
     setTimeout(() => {
       fetchRandomQuestion();
@@ -171,7 +164,7 @@ function App() {
 
   const handlePrevQuestion = () => {
     console.log(prevQuestion.length)
-    if (prevQuestion.length === 0 && prevAnswer.length === 0) return
+    if (prevQuestion.length === 0 && prevAnswer.length === 0) return;
     else {
       if (phase === "back") {
         setPhase("front");
@@ -187,8 +180,9 @@ function App() {
       setAnswerCode(prevAnswerCode[prevAnswerCode.length-1]);
       setPrevAnswerCode(prevAnswerCode.slice(0,-1));
       setSource(prevSource[prevSource.length-1]);
-      console.log('prevQuestion: ',prevQuestion)
-    }
+      if (prevQuestion.length === 1 && prevAnswer.length === 1) setIsDisabled(true);
+      // console.log('prevQuestion: ',prevQuestion)
+  }
   }
   // reset
 
@@ -205,6 +199,7 @@ function App() {
       setPrevQuestionCode([]);
       setPrevAnswerCode([]);
       setPrevSource([]);
+      setIsDisabled(true);
   }
 
   const returnToMainPage = () => {
@@ -215,15 +210,15 @@ function App() {
   const handleKeyDown = (e) => {
     if (e.key === "ArrowLeft") {
       handlePrevQuestion();
-      console.log("left")
+      // console.log("left")
     }
     else if (e.key === "ArrowRight") {
       handleNewQuestion();
-      console.log("right")
+      // console.log("right")
     }
-    // if (e.key === "ArrowUp" || e.key === "ArrowDown" ) {
-    //   phase === "front" ? setPhase("back") : setPhase("front");
-    // }
+    else if (e.key === "ArrowUp" || e.key === "ArrowDown" ) {
+      phase === "front" ? setPhase("back") : setPhase("front");
+    }
   };
   const outerTheme = quizType === 'JavaScript' ?  jsTheme : quizType === "HTML" ? htmlTheme : cssTheme;
 
@@ -264,8 +259,11 @@ function App() {
         <Box sx={buttonStyles}>
          < NextPreviousButton 
          onClick={handlePrevQuestion}
+         onKeyDown={handleKeyDown}
          button="back"
          startIcon={<KeyboardDoubleArrowLeftIcon />}
+          disabled={isDisabled}
+
          />
           <CurrentQuestionButton
             onClick={toggleFrontBack}
@@ -273,6 +271,7 @@ function App() {
           />
         < NextPreviousButton 
          onClick={handleNewQuestion}
+         onKeyDown={handleKeyDown}
          button="next"
          endIcon={<KeyboardDoubleArrowRightIcon />}
          />

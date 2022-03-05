@@ -8,17 +8,18 @@ const addStyles = {
         },   
 }
 
-// test disabled
-const NextPreviousButton = ({onClick, button, endIcon, startIcon}) => {
+const NextPreviousButton = ({onClick, button, endIcon, startIcon,onKeyDown, disabled}) => {
 
     const matches = useMediaQuery('only screen and (max-width: 500px)');
     const buttonText = matches ? "" : button;
     return (
         <CustomizedButton
             onClick={onClick}
+            onKeyDown={onKeyDown}
             endIcon={endIcon}
             startIcon={startIcon}
             sx={addStyles}
+            disabled={disabled}
             >
             {buttonText}
         </CustomizedButton>
