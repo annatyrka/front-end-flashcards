@@ -96,7 +96,7 @@
                 "code": null
             },
             "answer":  {
-                "text": "In JavaScript, a primitive value is data that is not an object and has no methods. There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol and null. \nAll primitives are immutable.",
+                "text": "In JavaScript, a **primitive value** is data that is not an object and has no methods. There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol and null. \nAll primitives are immutable.",
                 "code": null,
                 "source": "https://developer.mozilla.org/en-US/docs/Glossary/Primitive"
             }
@@ -107,7 +107,7 @@
                 "code": null
             },
             "answer":  {
-                "text": "In JavaScript, `NaN` stand for Not a Number. It is a global property representing a value which is not a valid number.",
+                "text": "In JavaScript, `NaN` stands for Not a Number. It is a global property representing a value which is not a valid number.",
                 "code": null,
                 "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"
             }
@@ -133,7 +133,141 @@
                 "code": null,
                 "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
             }
-        }                   
+        },
+        {   "id": 11,
+            "question": {
+                "text": "What is the difference between `setTimeout()` and `setInterval()`?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `setTimout()` method is executed only once. If you need repeated executions use `setInterval()` instead.",
+                "code": null,
+                "source": "https://www.w3schools.com/jsref/met_win_settimeout.asp"
+            }
+        },
+        {   "id": 12,
+            "question": {
+                "text": "What is a pure function?",
+                "code": null
+            },
+            "answer":  {
+                "text": "A **pure function** is a function which:\n - Given the same input, always returns the same output\n - Produces no side effects ",
+                "code": null,
+                "source": "https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/"
+            }
+        },
+        {   "id": 13,
+            "question": {
+                "text": "What does the `forEach()` method do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `forEach()` method executes a provided function once for each array element.",
+                "code": "```const array1 = ['a', 'b', 'c'];```\n ```array1.forEach(element => console.log(element));```",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
+            }
+        },
+        {   "id": 14,
+            "question": {
+                "text": "What does the `filter()` method do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `filter()` method **creates a new array** with all elements that pass the test implemented by the provided function.",
+                "code": "```const words = ['spray', 'limit', 'exuberant'];```\n ```const result = words.filter(word => word.length > 6);```",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+            }
+        },
+        {   "id": 15,
+            "question": {
+                "text": "What does the `map()` method do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `map()` method **creates a new array** populated with the results of calling a provided function on every element in the calling array.",
+                "code": "```const array1 = [1, 4, 9, 16];```\n ```const map1 = array1.map(x => x * 2);```\n ```console.log(map1); // [2, 8, 18, 32]```",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+            }
+        },
+        {   "id": 16,
+            "question": {
+                "text": "What does the `reduce()` method do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `reduce()` method executes a reducer function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
+            }
+        },
+        {   "id": 17,
+            "question": {
+                "text": "What is a *higher-order function*?",
+                "code": null
+            },
+            "answer":  {
+                "text": "*Higher-order function* is a function that accepts other function as an argument and/or returns a function as output. Examples of *higher-order functions* in JavaScript: \n - `Array.prototype.map()` \n - `Array.prototype.filter()`",
+                "code": null,
+                "source": "https://www.freecodecamp.org/news/a-quick-intro-to-higher-order-functions-in-javascript-1a014f89c6b/"
+            }
+        },
+        {   "id": 18,
+            "question": {
+                "text": "What is a *Callback Function*?",
+                "code": null
+            },
+            "answer":  {
+                "text": "A callback is a function passed as an argument to another function. Callbacks make sure that a function is not going to run before a task is completed but will run right after the task has completed.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Glossary/Callback_function"
+            }
+        },
+        {   "id": 19,
+            "question": {
+                "text": "What is the difference between *Callbacks* and *Promises*?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The main difference between Callback Functions and Promises is that we attach a callback to a Promise rather than passing it. So we still use callback functions with Promises, but in a different way (chaining).",
+                "code": null,
+                "source": "https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/"
+            }
+        },
+        {   "id": 20,
+            "question": {
+                "text": "What is a *Promise*?",
+                "code": null
+            },
+            "answer":  {
+                "text": "A Promise is an object representing the eventual completion or failure of an asynchronous operation. Promises provide an alternative approach for callbacks by reducing the callback hell and making code cleaner.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises"
+            }
+        },
+        {   "id": 21,
+            "question": {
+                "text": "What does the `promise.then()` method do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The method `promise.then()` is used to associate further action with a promise that becomes settled. It takes up to two arguments; the first argument is a callback function for the resolved case of the promise, and the second argument is a callback function for the rejected case.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+            }
+        },
+        {   "id": 22,
+            "question": {
+                "text": "What is the purpose of `delete` operator?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `delete` operator removes a given property from an object.",
+                "code": "```let user = {name: 'John', age: 25 };```\n ```delete user.age;```",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete"
+            }
+        }       
+         
+
     ],
 
     "HTML": [
