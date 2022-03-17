@@ -265,9 +265,63 @@
                 "code": "```let user = {name: 'John', age: 25 };```\n ```delete user.age;```",
                 "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete"
             }
-        }       
-         
-
+        },
+        {   "id": 23,
+            "question": {
+                "text": "What does JSON stand for?",
+                "code": null
+            },
+            "answer":  {
+                "text": "JavaScript Object Notation (JSON). It is a standard text-based format for representing structured data based on JavaScript object syntax.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
+            }
+        },
+        {   "id": 24,
+            "question": {
+                "text": "What is the difference between variable declaration and definition?",
+                "code": null
+            },
+            "answer":  {
+                "text": null,
+                "code": "```var x; // Declaration```\n ```typeof x === 'undefined'; // Will return true``` \n```var x = 1; // Declaration and definition```",
+                "source": "https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions"
+            }
+        },
+        {   "id": 25,
+            "question": {
+                "text": "Given an array `let arr = [1,2,3]`, when it is not recommended to empty it by assigning the variable `arr` to a new empty array `arr = []`?",
+                "code": null
+            },
+            "answer":  {
+                "text": "This approach is not recommended when we have references to the original array `arr` anywhere else because the reference array will remain unchanged.",
+                "code": null,
+                "source": "https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions"
+            }
+        },
+        {   "id": 26,
+            "question": {
+                "text": "What does the `splice()` method do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `splice()` method changes the contents of an array by removing or replacing existing elements and/or adding new elements **in place**.",
+                "code": "```const months = ['Jan', 'Feb' 'March', 'May'];```\n ```months.splice(3, 1, 'April'); ```\n ``` // output: ['Jan', 'Feb' 'March', 'April', 'May']```",
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"
+            }
+        },
+        {   "id": 27,
+            "question": {
+                "text": "What does the `slice()` method do?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `slice()` method returns a shallow copy of a portion of an array into a new array object selected from `start` to `end` (`end` not included) where `start` and `end` represent the index of items in that array. The original array **will not be modified**.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
+            }
+        }
+      
     ],
 
     "HTML": [
@@ -347,7 +401,40 @@
                 "code": null,
                 "source": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
             }
-        } 
+        },
+        {   "id": 8,
+            "question": {
+                "text": "What is DOM?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The **Document Object Model** (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.",
+                "code": null,
+                "source": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"
+            }
+        } ,
+        {   "id": 9,
+            "question": {
+                "text": "What is the role of the `action` attribute in the `<form>` element?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `action` attribute defines where the data gets sent. Its value must be a valid relative or absolute URL. If this attribute isn't provided, the data will be sent to the URL of the page containing the form.",
+                "code": "```<form action='https://example.com'>```",
+                "source": "https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data"
+            }
+        },
+        {   "id": 10,
+            "question": {
+                "text": "What is the role of the `method` attribute in the `<form>` element?",
+                "code": null
+            },
+            "answer":  {
+                "text": "The `method` attribute defines how data is sent. HTML form data can be transmitted via a number of different methods, the most common being the `GET` method and the `POST` method.",
+                "code": "```<form action='https://example.com' method='GET'>```",
+                "source": "https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data"
+            }
+        }   
     ],
     "CSS": [
         {   "id": 1,
